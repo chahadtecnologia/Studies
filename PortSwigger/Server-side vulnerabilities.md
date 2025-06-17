@@ -28,3 +28,11 @@ Authentication is the process of checking that a user really is who they claim t
 SSRF vulnerabilities enable an attacker to trigger malicious server-to-server requests to unintended URLs. As the server issuing the request is likely to have a strong trust relationship with other systems on the network, the attacker can potentially abuse this behavior to access data, functionality, and services that are not meant to be exposed to external users.
 
 - SSRF attacks against the server
+- SSRF attacks against other back-end systems
+
+## File upload vulnerabilities
+Any functionality that enables users to upload files to the server's filesystem are inherently dangerous. Failing to enforce proper restrictions on the files that users are allowed to upload can potentially enable an attacker to run arbitrary system commands, giving them full control over the server.
+
+- Exploiting unrestricted file uploads to deploy a web shell
+- Exploiting flawed validation of file uploads
+- Flawed file type validation
